@@ -1,0 +1,400 @@
+/* Clock Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand h1 {
+    font-size: 1.8rem;
+    color: #667eea;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #667eea;
+}
+
+/* Main Clock Container */
+.clock-container {
+    background: white;
+    margin: 2rem auto;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+}
+
+/* Main Clock Section */
+.main-clock-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.main-clock-section h2 {
+    color: #667eea;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.main-clock {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.time-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.date-display {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Controls Section */
+.controls-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.control-group label {
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+}
+
+.control-group select {
+    padding: 0.8rem;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.control-group select:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #c0392b;
+}
+
+/* Format Group */
+.format-group {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.format-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+}
+
+.format-group input[type="radio"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+/* Timezones Container */
+.timezones-container {
+    background: white;
+    margin: 2rem auto;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+}
+
+.timezones-container h2 {
+    color: #667eea;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* Timezone Grid */
+.timezone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.timezone-card {
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timezone-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    border-color: #764ba2;
+}
+
+.timezone-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.timezone-abbr {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+.timezone-time {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.timezone-date {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.timezone-offset {
+    font-size: 0.85rem;
+    color: #95a5a6;
+    margin-bottom: 1.5rem;
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* No Zones Message */
+.no-zones-message {
+    text-align: center;
+    padding: 3rem;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.no-zones-message p {
+    color: #95a5a6;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-clock-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .time-display {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .date-display {
+        font-size: 1rem;
+    }
+
+    .controls-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .format-group {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .timezone-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .clock-container,
+    .timezones-container {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-clock {
+        padding: 1.5rem;
+    }
+
+    .time-display {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .date-display {
+        font-size: 0.9rem;
+    }
+
+    .timezone-card {
+        padding: 1.5rem;
+    }
+
+    .timezone-time {
+        font-size: 1.5rem;
+    }
+
+    .timezone-grid {
+        gap: 1rem;
+    }
+
+    .clock-container,
+    .timezones-container {
+        padding: 1rem;
+    }
+
+    .nav-brand h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+    }
+}
